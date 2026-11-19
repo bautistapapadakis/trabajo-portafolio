@@ -1,0 +1,58 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1857 >>
+stream
+BT /F2 22 Tf 60 790 Td (MIA FERNANDEZ) Tj ET
+BT /F1 13 Tf 60 756 Td (Desarrolladora Full Stack) Tj ET
+BT /F1 10 Tf 60 726 Td (mia.fernandez@email.com  |  +54 9 11 5555-1234  |  Buenos Aires, Argentina) Tj ET
+BT /F1 10 Tf 60 698 Td (GitHub: github.com/tu-usuario  |  LinkedIn: linkedin.com/in/tu-usuario) Tj ET
+BT /F2 13 Tf 60 664 Td (PERFIL) Tj ET
+BT /F1 10 Tf 60 640 Td (Desarrolladora full stack con formacion en Python, Flask y MySQL.) Tj ET
+BT /F1 10 Tf 60 624 Td (Experiencia creando interfaces responsive, accesibles y faciles de mantener.) Tj ET
+BT /F1 10 Tf 60 608 Td (Trabajo en equipo, communication clara y orientacion a resultados.) Tj ET
+BT /F2 13 Tf 60 578 Td (EXPERIENCIA) Tj ET
+BT /F2 11 Tf 60 554 Td (Desarrolladora Web Junior - Freelance \(2025 - Actualidad\)) Tj ET
+BT /F1 10 Tf 60 536 Td (Creacion y mantenimiento de sitios web con Flask, MySQL y diseno responsive.) Tj ET
+BT /F2 11 Tf 60 520 Td (Practicas en Soporte IT - Estudio Digital \(2024\)) Tj ET
+BT /F1 10 Tf 60 502 Td (Soporte a usuarios, carga de datos y documentacion de procesos internos.) Tj ET
+BT /F2 13 Tf 60 472 Td (ESTUDIOS) Tj ET
+BT /F2 11 Tf 60 448 Td (Tecnicatura en Programacion - UTN FRBA \(2022 - 2025\)) Tj ET
+BT /F2 11 Tf 60 430 Td (Curso de Desarrollo Web Full Stack - CoderHouse \(2024\)) Tj ET
+BT /F2 11 Tf 60 412 Td (Secundario Orientado a Ciencias Naturales - Escuela N 7 \(2016 - 2021\)) Tj ET
+BT /F2 13 Tf 60 382 Td (TECNOLOGIAS) Tj ET
+BT /F1 10 Tf 60 358 Td (Python, Flask, MySQL, HTML, CSS, JavaScript, Git y GitHub.) Tj ET
+BT /F2 13 Tf 60 328 Td (PROYECTOS) Tj ET
+BT /F1 10 Tf 60 304 Td (Portfolio personal: sitio full stack con login y panel de edicion.) Tj ET
+BT /F1 10 Tf 60 288 Td (Gestor de tareas: organizacion de tareas con filtros y estados.) Tj ET
+BT /F1 10 Tf 60 272 Td (Landing de cafeteria: pagina responsive con animaciones y mapa.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002160 00000 n 
+0000002230 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2305
+%%EOF

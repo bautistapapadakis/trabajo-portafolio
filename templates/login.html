@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Ingresar | Portfolio{% endblock %}
+
+{% block cabecera %}
+<header class="site-header simple">
+  <nav class="container nav">
+    <a class="logo" href="{{ url_for('index') }}">M<span>F</span><i>.</i></a>
+    <a class="btn btn-small btn-outline" href="{{ url_for('index') }}"><i class="fa-solid fa-arrow-left"></i> Volver al portfolio</a>
+  </nav>
+</header>
+{% endblock %}
+
+{% block contenido %}
+<section class="auth">
+  <form class="auth-card reveal" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <div class="auth-icono"><i class="fa-solid fa-user-shield"></i></div>
+    <h1>Panel de edición</h1>
+    <p>Ingresá con tu usuario y contraseña para modificar el portfolio.</p>
+
+    <label for="username">{{ form.username.label.text }}</label>
+    {{ form.username(id="username", placeholder="Tu usuario", autocomplete="username") }}
+    {% for error in form.username.errors %}<small class="error">{{ error }}</small>{% endfor %}
+
+    <label for="password">{{ form.password.label.text }}</label>
+    {{ form.password(id="password", placeholder="Tu contraseña", autocomplete="current-password") }}
+    {% for error in form.password.errors %}<small class="error">{{ error }}</small>{% endfor %}
+
+    <label class="check">{{ form.remember() }} {{ form.remember.label.text }}</label>
+    {{ form.submit(class="btn btn-block") }}
+    <p class="pista">Usuario de prueba: <strong>admin</strong> / contraseña: <strong>admin123</strong></p>
+  </form>
+</section>
+{% endblock %}

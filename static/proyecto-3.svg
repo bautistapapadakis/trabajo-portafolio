@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Vista previa de la landing de cafetería">
+  <defs><linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3a2418"/><stop offset="1" stop-color="#6b4226"/></linearGradient></defs>
+  <rect width="800" height="500" fill="url(#c)"/>
+  <circle cx="640" cy="120" r="150" fill="#e0a86b" opacity=".18"/>
+  <rect x="70" y="55" width="660" height="390" rx="20" fill="#f6efe3"/>
+  <rect x="70" y="55" width="660" height="60" rx="20" fill="#fff"/>
+  <rect x="102" y="79" width="90" height="12" rx="6" fill="#6b4226"/>
+  <rect x="490" y="79" width="55" height="12" rx="6" fill="#b09a80"/><rect x="565" y="79" width="55" height="12" rx="6" fill="#b09a80"/><rect x="640" y="73" width="60" height="26" rx="13" fill="#6b4226"/>
+  <circle cx="270" cy="245" r="82" fill="#d9b48f"/>
+  <path d="M205 285h130l-18 52h-94z" fill="#fff" opacity=".8"/>
+  <path d="M335 245c34 0 34 44 0 44" fill="none" stroke="#d9b48f" stroke-width="14"/>
+  <path d="M250 210c-6-16 10-22 4-38M282 210c-6-16 10-22 4-38" stroke="#fff" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"/>
+  <rect x="420" y="186" width="240" height="18" rx="9" fill="#6b4226"/>
+  <rect x="420" y="222" width="260" height="11" rx="5" fill="#b09a80"/><rect x="420" y="246" width="220" height="11" rx="5" fill="#b09a80"/><rect x="420" y="270" width="240" height="11" rx="5" fill="#b09a80"/>
+  <rect x="420" y="310" width="140" height="40" rx="20" fill="#e0a86b"/>
+</svg>

@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% block title %}{{ perfil.nombre }} | Portfolio{% endblock %}
+
+{% block contenido %}
+
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-texto reveal">
+      <p class="saludo"><span class="punto"></span> Hola, soy</p>
+      <h1>{{ perfil.nombre }}</h1>
+      <h2 class="typing">{{ perfil.titulo }}</h2>
+      <p class="hero-descripcion">{{ perfil.descripcion }}</p>
+      <div class="hero-acciones">
+        <a class="btn" href="#proyectos"><i class="fa-solid fa-layer-group"></i> Ver proyectos</a>
+        <a class="btn btn-outline" href="{{ url_for('descargar_cv') }}">
+          <i class="fa-solid fa-file-pdf"></i> Descargar CV
+        </a>
+      </div>
+      <div class="redes">
+        <a href="{{ perfil.github }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="{{ perfil.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:{{ perfil.email }}" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:{{ perfil.telefono }}" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="hero-foto reveal">
+      <div class="foto-marco">
+        <img src="{{ url_for('static', filename='avatar.svg') }}" alt="Retrato ilustrado de {{ perfil.nombre }}">
+      </div>
+      <span class="foto-etiqueta"><i class="fa-solid fa-code"></i> Full Stack</span>
+    </div>
+  </div>
+  <a class="scroll" href="#sobre-mi" aria-label="Desplazarse hacia abajo"><i class="fa-solid fa-chevron-down"></i></a>
+</section>
+
+<section class="seccion" id="sobre-mi">
+  <div class="container">
+    <div class="titulo-seccion reveal">
+      <span class="numero">01</span>
+      <div><p class="etiqueta">Conoceme</p><h2>Sobre mí</h2></div>
+    </div>
+    <div class="sobre-grid">
+      <p class="sobre-texto reveal">{{ perfil.descripcion }}</p>
+      <div class="stats reveal">
+        <div class="stat"><strong>{{ estudios|length }}</strong><span>Estudios</span></div>
+        <div class="stat"><strong>{{ experiencias|length }}</strong><span>Experiencias</span></div>
+        <div class="stat"><strong>{{ tecnologias|length }}</strong><span>Tecnologías</span></div>
+        <div class="stat"><strong>{{ proyectos|length }}</strong><span>Proyectos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-clara" id="estudios">
+  <div class="container">
+    <div class="titulo-seccion reveal">
+      <span class="numero">02</span>
+      <div><p class="etiqueta">Formación</p><h2>Estudios</h2></div>
+    </div>
+    <div class="timeline">
+      {% for estudio in estudios %}
+      <article class="tarjeta linea reveal">
+        <span class="icono"><i class="fa-solid fa-graduation-cap"></i></span>
+        <div>
+          <p class="periodo">{{ estudio.periodo }}</p>
+          <h3>{{ estudio.titulo }}</h3>
+          <p class="subtitulo">{{ estudio.institucion }}</p>
+          <p>{{ estudio.descripcion }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="experiencia">
+  <div class="container">
+    <div class="titulo-seccion reveal">
+      <span class="numero">03</span>
+      <div><p class="etiqueta">Trayectoria</p><h2>Experiencia laboral</h2></div>
+    </div>
+    <div class="timeline">
+      {% for trabajo in experiencias %}
+      <article class="tarjeta linea reveal">
+        <span class="icono"><i class="fa-solid fa-briefcase"></i></span>
+        <div>
+          <p class="periodo">{{ trabajo.periodo }}</p>
+          <h3>{{ trabajo.puesto }}</h3>
+          <p class="subtitulo">{{ trabajo.empresa }}</p>
+          <p>{{ trabajo.descripcion }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-clara" id="tecnologias">
+  <div class="container">
+    <div class="titulo-seccion reveal">
+      <span class="numero">04</span>
+      <div><p class="etiqueta">Herramientas</p><h2>Tecnologías</h2></div>
+    </div>
+    <div class="tecnologias-grid">
+      {% for tecnologia in tecnologias %}
+      <article class="tech reveal">
+        <i class="{{ tecnologia.icono or 'fa-solid fa-star' }}"></i>
+        <div>
+          <h3>{{ tecnologia.nombre }}</h3>
+          <p>{{ tecnologia.nivel }}</p>
+          <span class="barra"><span class="barra-relleno"></span></span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="proyectos">
+  <div class="container">
+    <div class="titulo-seccion reveal">
+      <span class="numero">05</span>
+      <div><p class="etiqueta">Trabajos</p><h2>Proyectos</h2></div>
+    </div>
+    <div class="proyectos-grid">
+      {% for proyecto in proyectos %}
+      <article class="proyecto reveal">
+        <div class="proyecto-img">
+          <img src="{{ url_for('static', filename=proyecto.imagen or 'proyecto-1.svg') }}" alt="Imagen de {{ proyecto.titulo }}" loading="lazy">
+        </div>
+        <div class="proyecto-cuerpo">
+          <h3>{{ proyecto.titulo }}</h3>
+          <p>{{ proyecto.descripcion }}</p>
+          <p class="tags">{{ proyecto.tecnologias }}</p>
+          <a href="{{ proyecto.url }}" target="_blank" rel="noopener">Ver más <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-clara" id="contacto">
+  <div class="container">
+    <div class="titulo-seccion reveal">
+      <span class="numero">06</span>
+      <div><p class="etiqueta">Hablemos</p><h2>Contacto</h2></div>
+    </div>
+    <div class="contacto-grid">
+      <div class="contacto-datos reveal">
+        <h3>¿Trabajamos juntos?</h3>
+        <p>Estoy disponible para proyectos, prácticas y colaboraciones. Escribime y respondo lo antes posible.</p>
+        <ul class="lista-contacto">
+          <li><i class="fa-solid fa-envelope"></i><a href="mailto:{{ perfil.email }}">{{ perfil.email }}</a></li>
+          <li><i class="fa-solid fa-phone"></i><a href="tel:{{ perfil.telefono }}">{{ perfil.telefono }}</a></li>
+          <li><i class="fa-solid fa-location-dot"></i><span>{{ perfil.ubicacion }}</span></li>
+        </ul>
+      </div>
+      <div class="mapa reveal">
+        <iframe
+          title="Ubicación en el mapa"
+          src="https://www.google.com/maps?q={{ perfil.ubicacion|urlencode }}&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

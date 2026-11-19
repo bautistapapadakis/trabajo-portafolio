@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Retrato ilustrado">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="camiseta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#202a4d"/><stop offset="1" stop-color="#111830"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="#f2efff"/>
+  <circle cx="300" cy="272" r="210" fill="url(#fondo)" opacity=".22"/>
+  <circle cx="300" cy="272" r="168" fill="url(#fondo)" opacity=".35"/>
+  <path d="M92 600c18-118 100-180 208-180s190 62 208 180z" fill="url(#camiseta)"/>
+  <path d="M252 404h96v62c0 20-22 34-48 34s-48-14-48-34z" fill="#e8b394"/>
+  <ellipse cx="300" cy="290" rx="110" ry="132" fill="#f0c4a4"/>
+  <path d="M190 282c-6-92 42-150 110-150s116 58 110 150c-10-22-22-38-38-48-30 16-116 20-148-2-14 12-26 28-34 50z" fill="#2a2140"/>
+  <path d="M186 280c-16 30-10 96 4 124-30-18-44-72-34-118zM414 280c16 30 10 96-4 124 30-18 44-72 34-118z" fill="#2a2140"/>
+  <ellipse cx="262" cy="292" rx="10" ry="12" fill="#2a2140"/>
+  <ellipse cx="338" cy="292" rx="10" ry="12" fill="#2a2140"/>
+  <path d="M276 350c14 12 34 12 48 0" fill="none" stroke="#b9705b" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="238" cy="326" r="14" fill="#ef9f9f" opacity=".35"/>
+  <circle cx="362" cy="326" r="14" fill="#ef9f9f" opacity=".35"/>
+  <path d="M252 440l48 48 48-48" fill="none" stroke="#22d3ee" stroke-width="6" opacity=".8"/>
+</svg>

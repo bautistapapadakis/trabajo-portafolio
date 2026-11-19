@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Editar portfolio | Panel{% endblock %}
+
+{% block cabecera %}
+<header class="site-header simple">
+  <nav class="container nav">
+    <a class="logo" href="{{ url_for('index') }}">M<span>F</span><i>.</i></a>
+    <div class="nav-acciones">
+      <a class="btn btn-small btn-outline" href="{{ url_for('index') }}" target="_blank"><i class="fa-solid fa-eye"></i> Ver sitio</a>
+      <a class="btn btn-small" href="{{ url_for('logout') }}"><i class="fa-solid fa-right-from-bracket"></i> Salir</a>
+    </div>
+  </nav>
+</header>
+{% endblock %}
+
+{% block contenido %}
+<section class="admin">
+  <div class="container">
+    <div class="admin-cabecera">
+      <div>
+        <p class="etiqueta">Panel privado</p>
+        <h1>Editar portfolio</h1>
+        <p>Modificá los datos y guardá. Los cambios se reflejan en el sitio al instante.</p>
+      </div>
+      <div class="resumen"><span>{{ resumen|join(' · ') }}</span></div>
+    </div>
+
+    <form method="post" class="admin-form">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+      <fieldset class="bloque">
+        <legend><i class="fa-solid fa-user"></i> Datos personales</legend>
+        <div class="campos">
+          {% for campo, etiqueta in [('nombre','Nombre'), ('titulo','Título profesional'), ('email','Email'), ('telefono','Teléfono'), ('ubicacion','Ubicación'), ('github','GitHub'), ('linkedin','LinkedIn'), ('cv','Archivo CV')] %}
+          <label class="campo">
+            <span>{{ etiqueta }}</span>
+            <input type="text" name="{{ campo }}" value="{{ perfil[campo] }}" {% if campo in ['nombre', 'titulo'] %}required{% endif %}>
+          </label>
+          {% endfor %}
+        </div>
+        <label class="campo">
+          <span>Sobre mí</span>
+          <textarea name="descripcion" rows="3">{{ perfil.descripcion }}</textarea>
+        </label>
+      </fieldset>
+
+      {% for titulo, descripcion, icono in [
+          ('estudios','Un estudio por línea: ' ~ claves.estudios|join(' | '),'fa-graduation-cap'),
+          ('experiencias','Una experiencia por línea: ' ~ claves.experiencias|join(' | '),'fa-briefcase'),
+          ('tecnologias','Una tecnología por línea: ' ~ claves.tecnologias|join(' | '),'fa-microchip'),
+          ('proyectos','Un proyecto por línea: ' ~ claves.proyectos|join(' | '),'fa-layer-group')
+      ] %}
+      <fieldset class="bloque">
+        <legend><i class="fa-solid {{ icono }}"></i> {{ titulo|capitalize }}</legend>
+        <p class="ayuda">{{ descripcion }}</p>
+        <textarea name="{{ titulo }}" rows="5" spellcheck="false">{{ textos[titulo] }}</textarea>
+      </fieldset>
+      {% endfor %}
+
+      <button class="btn btn-block" type="submit"><i class="fa-solid fa-floppy-disk"></i> Guardar cambios</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
